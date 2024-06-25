@@ -1,0 +1,51 @@
+body,
+* {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+
+  color: rgba(0, 0, 0, 0.87);
+
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+
+  h1,
+  h2,
+  h3 {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.wrapper {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.name_section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  h1 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  h3 {
+    font-size: 22px;
+
+    margin-bottom: 10px;
+  }
+}
+
+.contacts_section {
+  margin: 20px 0 10px 0;
+
+  font-size: 14px;
+  p:nth-child(2) {
+    margin: 7px 0 7px 0;
+  }
+}
