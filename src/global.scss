@@ -1,13 +1,24 @@
+:root {
+  --main-bg-color: #2d4730d6;
+  --page-bg-color: #fff;
+
+  --main-text-color: rgba(0, 0, 0, 0.854);
+
+  --main-font-size: 16px;
+  --header-font-size: 24px;
+}
+
 body,
 * {
   font-family: "Open Sans", sans-serif;
+  font-size: var(--main-font-size);
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 
-  color: rgba(0, 0, 0, 0.87);
+  color: var(--main-text-color);
 
-  background-color: #ffffff;
+  background-color: var(--page-bg-color);
   margin: 0;
   padding: 0;
 
@@ -19,33 +30,73 @@ body,
   }
 }
 
-.wrapper {
-  max-width: 1080px;
+.main_container {
+  max-width: 900px;
   margin: 0 auto;
   padding: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.name_section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  h1 {
-    font-size: 36px;
+section {
+  margin-bottom: 20px;
+
+  .section_header {
+    font-size: var(--header-font-size);
     font-weight: 700;
-    margin-bottom: 10px;
+    text-align: center;
+    background: var(--main-bg-color);
+    color: #ffffff;
+    border-radius: 7px;
+    padding: 2px 0;
   }
-  h3 {
-    font-size: 22px;
+  .section_text {
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+}
+.section_sub_title {
+  font-weight: 700;
+  margin-left: 10px;
+}
 
-    margin-bottom: 10px;
+.info_section {
+  .imgInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+      font-size: 36px;
+      font-weight: 400;
+    }
+    img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 1px solid var(--main-bg-color);
+    }
+  }
+
+  h3 {
+    font-size: var(--header-font-size);
+    font-weight: 700;
+  }
+
+  .contacts {
+    text-align: right;
+    a {
+      cursor: pointer;
+      color: var(--main-bg-color);
+    }
   }
 }
 
-.contacts_section {
-  margin: 20px 0 10px 0;
-
-  font-size: 14px;
-  p:nth-child(2) {
-    margin: 7px 0 7px 0;
+.project_section {
+  ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    list-style-type: none;
   }
 }
