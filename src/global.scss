@@ -1,3 +1,4 @@
+@import "style.scss";
 :root {
   --main-bg-color: #2d4730d6;
   --page-bg-color: #fff;
@@ -5,9 +6,13 @@
   --main-text-color: rgba(0, 0, 0, 0.854);
 
   --main-font-size: 16px;
+  --main-font-size-mobile: 15px;
+
   --header-font-size: 24px;
+  --header-font-size-mobile: 18px;
 }
 
+// GENERAL
 body,
 * {
   font-family: "Open Sans", sans-serif;
@@ -28,19 +33,28 @@ body,
     margin: 0;
     padding: 0;
   }
+  @include mobile {
+    font-size: var(--main-font-size-mobile);
+  }
 }
 
 .main_container {
   max-width: 900px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 25px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  @include mobile {
+    padding: 10px;
+  }
 }
 
 section {
   margin-bottom: 20px;
 
   .section_header {
+    margin-bottom: 10px;
+    text-transform: uppercase;
     font-size: var(--header-font-size);
     font-weight: 700;
     text-align: center;
@@ -53,12 +67,22 @@ section {
     margin-left: 10px;
     margin-top: 10px;
   }
+
+  @include mobile {
+    margin-bottom: 10px;
+    .section_header {
+      font-size: var(--header-font-size-mobile);
+      padding: 0;
+    }
+  }
 }
+
 .section_sub_title {
   font-weight: 700;
   margin-left: 10px;
 }
 
+// INFO section
 .info_section {
   .imgInfo {
     display: flex;
@@ -76,11 +100,27 @@ section {
       border-radius: 50%;
       border: 1px solid var(--main-bg-color);
     }
+    @include mobile {
+      flex-direction: column;
+
+      h1 {
+        font-size: 30px;
+      }
+      img {
+        width: 100px;
+        height: 100px;
+      }
+    }
   }
 
   h3 {
     font-size: var(--header-font-size);
     font-weight: 700;
+    @include mobile {
+      font-size: 20px;
+      font-weight: 500;
+      text-align: center;
+    }
   }
 
   .contacts {
@@ -89,10 +129,37 @@ section {
       cursor: pointer;
       color: var(--main-bg-color);
     }
+    @include mobile {
+      text-align: center;
+    }
   }
 }
 
+// SKILLS section
+.skills_section {
+  .skills_block {
+    p {
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+// PROJECT section
 .project_section {
+  hr {
+    margin: 2px;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0),
+      var(--main-bg-color),
+      rgba(0, 0, 0, 0)
+    );
+  }
   ul {
     display: flex;
     justify-content: space-between;

@@ -38,9 +38,32 @@ function App() {
           technologies and best practices with the strong team.
         </p>
       </section>
-      <section className="skils_section">
+      <section className="skills_section">
         <h2 className="section_header">Skills</h2>
-        <p className="section_text"></p>
+        <div className="skills_block">
+          <div className="tech_skills">
+            <p>Tech</p>
+            <ul>
+              <li>HTML/CSS</li>
+              <li>JavaScript</li>
+              <li>PHP</li>
+              <li>React.js</li>
+              <li>Node.js</li>
+              <li>Postman (requests)</li>
+            </ul>
+          </div>
+          <div className="soft_skills">
+            <p>Soft</p>
+            <ul>                        
+              <li>Team building</li>            
+              <li>Motivated</li>            
+              <li>Friendliness</li>            
+              <li>Adaptability</li>            
+              <li>Self-managment</li>
+            </ul>
+          </div>
+
+        </div>
       </section>
       <section className="expirience_section">
         <h2 className="section_header">Expirience</h2>
@@ -48,7 +71,6 @@ function App() {
         <p className="section_sub_title">
           Industrial Engineer at Kromberg and Schubert Lu, Lutsk
         </p>
-        <p className="section_sub_title">2018 - present</p>
         <p className="section_text">
           Best electrick harness for BMW cars like the F45/F48/U25/F67/F55 etc.
           Hard teamwork brought 95% succesfull implementation and 98% timely
@@ -56,14 +78,15 @@ function App() {
           improvement targets made it possible to implement measures that have
           been relevant for years and reduce costs by 15-20%.
         </p>
+        <p className="section_sub_title">2018 - present</p>
       </section>
       <section className="education_section">
         <h2 className="section_header">Education</h2>
-        <p className="section_sub_title">2016 - 2018</p>
         <p className="section_text">
           Master`s Degree in Machine Building, Lutsk National Technical
           University
         </p>
+        <p className="section_sub_title">2016 - 2018</p>
       </section>
       <section className="project_section">
         <h2 className="section_header">Projects</h2>
@@ -89,6 +112,7 @@ function App() {
               </a>
             </li>
           </ul>
+          <hr />
         </div>
         <div>
           <p className="section_sub_title">E-commerce</p>
@@ -130,6 +154,7 @@ function App() {
               </a>
             </li>
           </ul>
+          <hr />
         </div>
         <div>
           <p className="section_sub_title">Rick&Morty</p>
@@ -157,6 +182,7 @@ function App() {
               </a>
             </li>
           </ul>
+          <hr />
         </div>
       </section>
     </div>
